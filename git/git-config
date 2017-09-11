@@ -1,0 +1,24 @@
+[user]
+    name = liqiang
+    email = liqiang@fenbi.com
+[color]
+    ui = true
+    diff = true
+    status = true
+    branch = true
+    interactive = true
+[alias]
+    st = status
+    ss = status -s
+    ci = commit
+    ca = commit --amend
+    co = checkout
+    ll = log --graph --color --format=format:'%C(bold)%h%C(reset) -%C(bold)%d%C(reset) %C(white)%s%C(reset) %C(bold red)- %an' --abbrev-commit
+    ft = fetch
+    pl = pull --rebase
+    br = branch
+    cp = cherry-pick
+    mg = merge
+    rb = rebase
+    dci = dcommit
+    sbu = submodule update
