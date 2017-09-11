@@ -1,0 +1,22 @@
+<templateSet group="SnapKit-Swift">
+  <template name="snp" value="snp.makeConstraints { make in&#10;    $CODE$&#10;}" description="snp.makeConstraints" toReformat="true" toShortenFQNames="true">
+    <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="swift.lang.context" value="true" />
+    </context>
+  </template>
+  <template name="eqts" value="make.$DIMENSION$.equalToSuperview()" description="equalToSuperview()" toReformat="true" toShortenFQNames="true">
+    <variable name="DIMENSION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="swift.lang.context" value="true" />
+    </context>
+  </template>
+  <template name="eqt" value="make.$DIMENSION$.equalTo($NAME$)" description="equalTo" toReformat="true" toShortenFQNames="true">
+    <variable name="DIMENSION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="objc" value="true" />
+      <option name="swift.lang.context" value="true" />
+    </context>
+  </template>
+</templateSet>

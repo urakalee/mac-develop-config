@@ -1,0 +1,16 @@
+<templateSet group="SnapKit-OC">
+  <template name="snp" value="[$NAME$ mas_makeConstraints:^(MASConstraintMaker *make) {&#10;    $CODE$&#10;}];" description="mas_makeConstraints" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="eqts" value="make.$DIMENSION$.equalTo($NAME$.superview)" description="equalTo(.superview)" toReformat="false" toShortenFQNames="true">
+    <variable name="DIMENSION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+</templateSet>

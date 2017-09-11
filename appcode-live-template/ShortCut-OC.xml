@@ -1,0 +1,90 @@
+<templateSet group="ShortCut-OC">
+  <template name="reg" value="#pragma mark - " description="region" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="lazylabel" value="- (UILabel *)$NAME$Label {&#10;    if (!_$NAME$Label) {&#10;        _$NAME$Label = [UILabel new];&#10;    }&#10;    return _$NAME$Label;&#10;}" description="uilabel" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="prop" value="@property (nonatomic) " description="property" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="propstrong" value="@property (nonatomic, strong) " description="property strong" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="propweak" value="@property (nonatomic, weak) " description="property weak" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="delegate" value="@protocol $NAME$Delegate &lt;NSObject&gt;&#10;&#10;@end" description="delegate" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="viewprop" value="@interface $NAME$ ()&#10;&#10;@end" description="@inteface ()" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="assumenonnull" value="NS_ASSUME_NONNULL_BEGIN&#10;&#10;NS_ASSUME_NONNULL_END" description="assume nonnull" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="propsn" value="@property (nonatomic, strong, nullable) " description="property strong nullable" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="propassign" value="@property (nonatomic, assign) " description="property assign" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="viewinterface" value="#import &lt;UIKit/UIKit.h&gt;&#10;&#10;@interface $NAME$ : UIView&#10;&#10;@end" description="@interface UIView" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="viewimpl" value="#pragma mark - Init&#10;&#10;- (instancetype)init {&#10;    self = [super init];&#10;    if (self) {&#10;        [self setupUserInterface];&#10;    }&#10;    return self;&#10;}&#10;&#10;- (void)setupUserInterface {&#10;    self.backgroundColor = TT_UI_GLOBAL_BG_COLOR;&#10;&#10;#pragma mark - addSubview&#10;&#10;#pragma mark - layout&#10;&#10;}&#10;&#10;#pragma mark - Private&#10;&#10;#pragma mark - Views" description="UIView" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="lazyimage" value="- (UIImageView *)$NAME$Image {&#10;    if (!_$NAME$Image) {&#10;        _$NAME$Image = [UIImageView new];&#10;    }&#10;    return _$NAME$Image;&#10;}" description="uiimageview" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="model" value="#import &lt;Mantle/Mantle.h&gt;&#10;&#10;@interface $NAME$ : MTLModel&lt;MTLJSONSerializing&gt;&#10;&#10;@end" description="MTLModel" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="modelkey" value="+ (NSDictionary *)JSONKeyPathsByPropertyKey {&#10;    return nil;&#10;}" description="JSONKeyPathsByPropertyKey" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+  <template name="modeljson" value="+ (NSValueTransformer *)$NAME$JSONTransformer {&#10;    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:$CLASS$.class];&#10;}" description="JSONDictionaryTransformer" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="objc" value="true" />
+    </context>
+  </template>
+</templateSet>
